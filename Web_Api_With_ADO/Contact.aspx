@@ -84,7 +84,27 @@
       </div>
   </div>
       <div class="container">
-        <asp:GridView ID="gdStudents" runat="server" CssClass="table table-bordered table-responsive">
+        <asp:GridView ID="gdStudents" runat="server" ShowFooter="true" CssClass="table table-bordered table-responsive" OnRowCommand="gdStudents_RowCommand" OnRowDeleting="gdStudents_RowDeleting">
+            <Columns>
+                <asp:TemplateField>
+                    <HeaderTemplate>
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                         <asp:Button class="btn btn-primary" ID="btnEdit" runat="server" Text="Edit" CommandName="Edit" CommandArgument='<%# Eval("ID") %>' Width="76px" />
+                    </ItemTemplate>
+                    <FooterTemplate>
+                    </FooterTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField>
+                    <HeaderTemplate>
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                         <asp:Button cssClass="btn btn-danger" ID="btnDelete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%# Eval("ID") %>' Width="76px" />
+                    </ItemTemplate>
+                    <FooterTemplate>
+                    </FooterTemplate>
+                </asp:TemplateField>
+            </Columns>
         </asp:GridView>
     </div>
 </asp:Content>

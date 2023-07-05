@@ -133,6 +133,7 @@
     <Content Include="Custom_Css\Default.css" />
     <Content Include="Custom_Css\StyleSheet.css" />
     <Content Include="Default.aspx" />
+    <Content Include="EditData.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -203,6 +204,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditData.aspx.cs">
+      <DependentUpon>EditData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditData.aspx.designer.cs">
+      <DependentUpon>EditData.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
